@@ -79,7 +79,5 @@
 	}
 </script>
 
-<script type="text/javascript"
-	src="resources/plugin/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="resources/js/custom/searchUser.js"></script>
+<script type="text/javascript" src="resources/js/custom/userSearch.js"></script>
 </html>

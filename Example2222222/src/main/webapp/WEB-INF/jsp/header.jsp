@@ -5,9 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/main.css" />
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="resources/css/main.css" />
+<script src="resources/js/plugin/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 
@@ -30,7 +29,6 @@
 			</ul>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript">
 		$(document).on('click', 'li', function() {
 			$(this).addClass('active').siblings().removeClass('active')

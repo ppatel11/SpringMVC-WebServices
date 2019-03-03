@@ -16,7 +16,7 @@ function findAllUsers() {
 		var userTableBody = $("#userTableBody");
 		$(userTableBody).empty();
 
-		$.each(response.data, function(key, userbj) {
+		$.each(response.data, function(key, userObj) {
 			var tr = $("<tr></tr>");
 			$(tr).append("<td>" + userObj.loginName + "</td>");
 			$(tr).append("<td>" + userObj.firstName + "</td>");
@@ -44,7 +44,7 @@ function searchById() {
 			url : restApiURL + "/api/user/getUserById",
 			method : "GET",
 			data : {
-				loginNme : searchId
+				loginName : loginName
 			},
 			dataType : "json"
 		});
