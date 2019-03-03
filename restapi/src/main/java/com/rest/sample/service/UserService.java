@@ -2,14 +2,10 @@ package com.rest.sample.service;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.Date;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-
 
 import com.rest.sample.db.DBConnection;
 import com.rest.sample.modal.User;
@@ -43,6 +39,7 @@ public class UserService {
 		User user = new User();
 		con = DBConnection.getDBConnection();
 		CallableStatement ps = con.prepareCall(sql);
+		ps.setString(1, loginName);
 		ps.registerOutParameter(2, oracle.jdbc.OracleTypes.CURSOR);
 		ps.executeUpdate();
 		
