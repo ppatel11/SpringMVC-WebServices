@@ -218,3 +218,110 @@ th,td{
 .dropdown-container a{
 	padding:8px 8px 8px 80px;
 }
+
+#toolTipHide{
+	display :none;
+}
+
+
+.tipso_style {
+    border-bottom: none;
+}
+
+.tipso_bubble{
+	text-align: left;
+	border-radius: 0px;
+	z-index : 300;
+	padding : 0px;
+}
+
+.tipso_content{
+	padding: 3px;
+}
+
+.tool-tip {
+  margin: 0px;
+  float: right;
+  background: white;
+  width: calc(100% - 20px);
+  position: relative;
+  padding: 10px;
+  margin-bottom: 3px;
+  color : #333;
+}
+
+.tool-tip .btn-app{
+	padding: 1vh 2%;
+    min-width: 12%;
+    height: 4vh;
+    margin-right: 5px;
+}
+
+.tool-tip .btn-app .fa{
+	font-size: 1.6vh;
+	line-height: 2vh;
+}
+
+.tool-tip .tool-tip-footer .btn-app .fa:before{
+	margin-right: 5px;
+}
+    
+.tool-tip .tool-tip-header {
+  border-bottom: 1px solid #E8E8E8;
+  text-align : left;
+  padding-bottom : 5px;
+  height: 3vh;
+}
+.tool-tip .tool-tip-header span{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tool-tip .tool-tip-footer {
+  border-top: 1px solid #E8E8E8;
+  padding-top : 5px;
+  text-align: right;
+}
+.tool-tip .tool-tip-body {
+	margin-top: 5px;
+    margin-bottom: 5px;
+	
+}
+
+.tool-tip .tool-tip-body .row{
+	border-top: none;
+	margin-top: 0px;
+}
+.tool-tip .tool-tip-body .form-group label{
+	display: table-row;
+}
+
+.tool-tip .tool-tip-body .form-group select, .tool-tip .tool-tip-body .form-group input{
+	margin : 8px 0px;
+	width: 100%;
+}
+
+#tool-tip-body-header-cancel,#tool-tip-body-header{
+	min-height: 6vh;
+    font-size: 2.9vh;
+    padding: 1vh;
+    padding-left: 5px;
+}
+
+#tool-tip-body-header-cancel{
+	
+	margin-bottom : 1vh;
+	background-color: #dd4b39 !important;
+	text-align : left;
+	font-size: 2vh;
+}
+
+#tool-tip-body-header-cancel div{
+	padding-left: 10px;
+}
+
+#tool-tip-body-header-cancel div:first-child{
+	padding-left: 0px;
+	font-weight: 600;
+}
+

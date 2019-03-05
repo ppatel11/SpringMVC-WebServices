@@ -5,8 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="resources/css/tipso.min.css" />
 <link rel="stylesheet" href="resources/css/main.css" />
+
+
 <script src="resources/js/plugin/jquery-3.3.1.min.js"></script>
+<script src="resources/js/plugin/tipso.min.js"></script>
 </head>
 <body>
 
@@ -36,4 +40,5 @@
 	</script>
 
 </body>
+
 </html>
