@@ -52,7 +52,7 @@
 			<th>Login Name <span ><i data-type="string" data-filtervalue="loginName" data-headername="Login Name"  class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
 			<th>First Name <span><i data-type="string" data-filtervalue="firstName" data-headername="First Name" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
 			<th>Last Name <span><i data-type="string" data-filtervalue="lastName" data-headername="Last Name" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
-			<th>Status ID <span><i data-type="int" data-filtervalue="statusId" data-headername="Status ID" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
+			<th>Status ID <span><i data-type="status" data-filtervalue="statusId" data-headername="Status ID" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
 			<th>Last Login Date <span><i  data-type="date" data-filtervalue="lastLoginDate" data-headername="Last Login Date" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
 			<th>Created Date <span><i data-type="date" data-filtervalue="createdDate" data-headername="Created Date" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
 			<th>Modified Date <span><i data-type="date" data-filtervalue="modifiedDate" data-headername="Modified Date" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
@@ -77,6 +77,7 @@
 						<select class="form-control operator" >
 							<option value="equal">Equal</option>
 							<option value="between">Between</option>
+							<option value="contain">Contain</option>
 						</select>
 					</div>
 				</div>
@@ -85,6 +86,10 @@
 					<div class="form-group">
 						<label>Value</label>
 						<div class="fliter-value"><input type="text" class="form-control min_value"></div>
+						<div class="fliter-value"> <select class="form-control value_status" >
+							<option value="1">Active</option>
+							<option value="0">Disable</option>
+						</select></div>
 					</div>
 					<div class="form-group">
 						<div class="fliter-value"><input type="text" class="form-control max_value"></div>

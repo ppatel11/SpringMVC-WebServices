@@ -111,8 +111,24 @@ function toolTipForColumnFilter() {
             $(tempContent).find(".max_value").hide();
             
             
-            if(dataType == "string"){
+            if(dataType == "string" ){
             	$(tempContent).find(".operator option[value='between']").remove();
+            }else if(dataType == "status"){
+            	$(tempContent).find(".operator option[value='contain']").remove();
+            	$(tempContent).find(".operator option[value='between']").remove();
+            }else {
+            	$(tempContent).find(".operator option[value='contain']").remove();
+            	
+            }
+            
+            if(dataType == "date"){
+            	$(tempContent).find(".fliter-value input").datepicker();
+            }
+            	
+            if(dataType == "status"){
+            	$(tempContent).find(".fliter-value input").remove();
+            }else{
+            	$(tempContent).find(".fliter-value select").remove();
             }
             
             ele.tipso('update', 'content', $(tempContent).removeClass("hide"));
@@ -147,6 +163,12 @@ function filterTable(event){
 	var filterValue = $(this).attr("data-filtervalue");
 	var operation = $(event.data.tooltipContent).find(".operator").val();
 	var filterValueMin =  $(event.data.tooltipContent).find(".min_value").val();
+	
+	if(type === "status"){
+		filterValueMin =  $(event.data.tooltipContent).find(".value_status").val();
+	}
+	
+	
 	var filterValueMax =  $(event.data.tooltipContent).find(".max_value").val();
 	
 	
@@ -177,6 +199,10 @@ function filterObject(type , operation , objValue, filterValueMin , filterValueM
 			if(objValue === filterValueMin){
 				return true;
 			}
+		}else if(operation === "contain"){
+			if(objValue.toLocaleLowerCase().includes(filterValueMin.toLocaleLowerCase())){
+				return true;
+			}
 		}
 	}else if(type === "int"){
 		
@@ -205,6 +231,12 @@ function filterObject(type , operation , objValue, filterValueMin , filterValueM
 			}
 		}else if(operation === "between"){
 			if(filterValueMin <= objValue && filterValueMax >= objValue){
+				return true;
+			}
+		}
+	}else if(type === "status"){
+		if(operation === "equal"){
+			if(objValue == filterValueMin){
 				return true;
 			}
 		}
