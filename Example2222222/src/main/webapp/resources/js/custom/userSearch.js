@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	$("#searchAll").bind("click", findAllUsers);
 	$("#searchById").bind("click", searchById);
-	//Bind all the filter icon for show tooltip
+	$(".tooltip-clicked").bind("click", toolTipForColumnFilterShow);
+	
 	toolTipForColumnFilter();
 });
 
@@ -122,7 +123,7 @@ function toolTipForColumnFilter() {
             }
             
             if(dataType == "date"){
-            	$(tempContent).find(".fliter-value input").datepicker();
+            	$(tempContent).find(".fliter-value input").datepicker({ dateFormat: 'yy-mm-dd' });
             }
             	
             if(dataType == "status"){
@@ -190,6 +191,9 @@ function filterTable(event){
 		}
 		
 	});
+	
+	$(".tooltip-clicked").removeClass('clicked');
+	$(".columnFilterToolTip").tipso('hide');
 }
 
 function filterObject(type , operation , objValue, filterValueMin , filterValueMax){
@@ -243,4 +247,18 @@ function filterObject(type , operation , objValue, filterValueMin , filterValueM
 	}
 	
 	return false;
+}
+
+function toolTipForColumnFilterShow(e) {
+	
+	if ($(this).hasClass('clicked')) {
+		$(this).removeClass('clicked');
+		$(this).closest("th").find(".columnFilterToolTip").tipso('hide');
+	} else {
+		$(".tooltip-clicked").removeClass('clicked');
+		$(".columnFilterToolTip").tipso('hide');
+		$(this).addClass('clicked');
+		$(this).closest("th").find(".columnFilterToolTip").tipso('show');
+	}
+	e.preventDefault();
 }

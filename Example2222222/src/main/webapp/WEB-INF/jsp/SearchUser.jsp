@@ -46,21 +46,47 @@
 
 			</div>
 			<table>
-			<tbody id="userTableBody"></tbody>
-			<thead>
-			<tr>
-			<th>Login Name <span ><i data-type="string" data-filtervalue="loginName" data-headername="Login Name"  class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
-			<th>First Name <span><i data-type="string" data-filtervalue="firstName" data-headername="First Name" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
-			<th>Last Name <span><i data-type="string" data-filtervalue="lastName" data-headername="Last Name" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
-			<th>Status ID <span><i data-type="status" data-filtervalue="statusId" data-headername="Status ID" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
-			<th>Last Login Date <span><i  data-type="date" data-filtervalue="lastLoginDate" data-headername="Last Login Date" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
-			<th>Created Date <span><i data-type="date" data-filtervalue="createdDate" data-headername="Created Date" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
-			<th>Modified Date <span><i data-type="date" data-filtervalue="modifiedDate" data-headername="Modified Date" class="fa fa-filter columnFilterToolTip" aria-hidden="true"></i></span></th>
-			
-			</tr>
-			</thead>
+				<tbody id="userTableBody"></tbody>
+				<thead>
+					<tr>
+						<th>Login Name <span><i class="fa fa-filter tooltip-clicked" aria-hidden="true"></i></span>
+							<div data-type="string"
+								data-filtervalue="loginName" data-headername="Login Name" class="columnFilterToolTip" style="visibility: hidden;"></div>
+						</th>
+						<th>First Name <span><i class="fa fa-filter tooltip-clicked" aria-hidden="true"></i></span>
+							<div data-type="string"
+								data-filtervalue="firstName" data-headername="First Name" class="columnFilterToolTip" style="visibility: hidden;"></div>
+						</th>	
+						<th>Last Name <span><i  class="fa fa-filter tooltip-clicked" aria-hidden="true"></i></span>
+							<div data-type="string"
+								data-filtervalue="lastName" data-headername="Last Name" class="columnFilterToolTip" style="visibility: hidden;"></div>
+						</th>
+						<th>Status ID <span><i 
+								class="fa fa-filter tooltip-clicked" aria-hidden="true"></i></span>
+							<div data-type="status"
+								data-filtervalue="statusId" data-headername="Status ID" class="columnFilterToolTip" style="visibility: hidden;"></div>
+						</th>
+						<th>Last Login Date <span><i 
+								class="fa fa-filter tooltip-clicked" aria-hidden="true"></i></span>
+							<div data-type="date"
+								data-filtervalue="lastLoginDate"
+								data-headername="Last Login Date" class="columnFilterToolTip" style="visibility: hidden;"></div>
+						</th>
+						<th>Created Date <span><i 
+								class="fa fa-filter tooltip-clicked" aria-hidden="true"></i></span>
+							<div data-type="date"
+								data-filtervalue="createdDate" data-headername="Created Date" class="columnFilterToolTip" style="visibility: hidden;"></div>
+						</th>
+						<th>Modified Date <span><i 
+								class="fa fa-filter tooltip-clicked" aria-hidden="true"></i></span>
+							<div data-type="date"
+								data-filtervalue="modifiedDate" data-headername="Modified Date" class="columnFilterToolTip" style="visibility: hidden;"></div>
+						</th>
+
+					</tr>
+				</thead>
 			</table>
-<div id="toolTipHide">
+			<div id="toolTipHide">
 
 	<div id="tool-tip-content" class="tool-tip">
 		<div class="tool-tip-header">

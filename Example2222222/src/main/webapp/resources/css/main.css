@@ -325,3 +325,8 @@ th,td{
 	font-weight: 600;
 }
 
+.tooltip-clicked{
+	cursor: pointer;
+	
+}
+
