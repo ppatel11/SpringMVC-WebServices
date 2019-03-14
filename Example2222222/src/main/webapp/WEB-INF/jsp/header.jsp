@@ -30,7 +30,7 @@
 		<div>
 			<ul class="nav">
 				<li><a href="/CARMA">Home</a></li>
-				<li><a href="#deals/">Deals</a>
+				<li><a href="deal">Deals</a>
 				<li><a href="#accounting/">Accounting</a>
 				<li><a href="#report/">Report</a>
 				<li><a href="Admin">Admin</a>
