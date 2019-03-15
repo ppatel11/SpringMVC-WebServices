@@ -113,8 +113,8 @@
 						<label>Value</label>
 						<div class="fliter-value"><input type="text" class="form-control min_value"></div>
 						<div class="fliter-value"> <select class="form-control value_status" >
-							<option value="1">Active</option>
-							<option value="0">Disable</option>
+							<option value="Active">Active</option>
+							<option value="InActive">InActive</option>
 						</select></div>
 					</div>
 					<div class="form-group">
