@@ -19,6 +19,14 @@ xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springf
    </bean>
    
    <mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+		 <!-- setting maximum upload size -->
+		<property name="maxUploadSize" value="100000" />
+
+	</bean>
    
    <mvc:annotation-driven/> 
 
