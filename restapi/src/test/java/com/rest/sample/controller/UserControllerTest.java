@@ -64,7 +64,7 @@ public class UserControllerTest extends JerseyTest {
 
 	@Test
 	public void getAll() {
-		Response response = target("/user/get/all").request().get();
+		Response response = target("/user/getAllUser").request().get();
 		assertEquals("should return status 200", 200, response.getStatus());
 		assertNotNull("Should return user list", response.getEntity().toString());
 		System.out.println(response.getStatus());
@@ -73,7 +73,7 @@ public class UserControllerTest extends JerseyTest {
 
 	@Test
 	public void userGetById() {
-		Response output = target("/user/get").queryParam("userId", "1").request().get();
+		Response output = target("/user/getUserById").queryParam("userId", "1").request().get();
 		assertEquals("Should return status 200", 200, output.getStatus());
 		assertNotNull("Should return user object as json", output.getEntity());
 		System.out.println(output.getStatus());
