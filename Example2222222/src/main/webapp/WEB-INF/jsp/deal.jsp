@@ -36,7 +36,7 @@
 			</div>
 
 			<div>
-				<div class="row">
+				<div class="row investmentDetailRow">
 				
 					<div>
 						<label>Investment Name</label> <input type="text"

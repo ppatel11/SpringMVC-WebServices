@@ -42,7 +42,8 @@ function saveInvestment(){
 		});
 
 		request.done(function(response) {
-			
+			$(".investmentDetailRow input").val("");
+			$(".investmentDetailRow #investerDetails td").html("");
 			alert("Save Successfully!!!");
 		});
 	}else{
