@@ -6,11 +6,10 @@ public class Investor {
 		
 	}
 	
-	public Investor(String name, String ownership, String blaOne,  int investmentID) {
+	public Investor(String name, String ownership, String blaOne) {
 		this.name = name;
 		this.ownership = ownership;
 		this.blaOne = blaOne;
-		this. investmentID= investmentID;
 	}
 
 	private String name;
@@ -18,8 +17,6 @@ public class Investor {
 	private String ownership;
 	
 	private String blaOne;
-	
-	private int investmentID;
 
 	public String getName() {
 		return name;
@@ -43,14 +40,7 @@ public class Investor {
 
 	public void setBlaOne(String blaOne) {
 		this.blaOne = blaOne;
-	}
 
-	public int getInvestmentID() {
-		return investmentID;
-	}
-
-	public void setInvestmentID(int investmentID) {
-		this.investmentID = investmentID;
 	}
 	
 	

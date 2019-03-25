@@ -9,8 +9,8 @@ public class DBConnection {
 	
 	private static final String DB_DRIVER = "oracle.jdbc.driver.OracleDriver";
 	private static final String DB_CONNECTION ="jdbc:oracle:thin:@localhost:1521:orcl";
-	private static final String DB_USER = "SYSTEM";
-	private static final String DB_PASSWORD = "SYSTEM";
+	private static final String DB_USER = "bdhanu";
+	private static final String DB_PASSWORD = "12345";
 	
 	
 	public static Connection getDBConnection() {
@@ -36,5 +36,10 @@ public class DBConnection {
 System.out.println("3");
 		return dbConnection;
 
+	}
+	
+	public static void main(String[] args) {
+		Connection connection = DBConnection.getDBConnection();
+		System.out.println(connection);
 	}
 }

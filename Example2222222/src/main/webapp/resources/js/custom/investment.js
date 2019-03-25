@@ -6,12 +6,6 @@ $(document).ready(function() {
 });
 
 
-/*function submit() {
-  Put all the data posting code here
- document.getElementById("myForm").reset();
-}*/
-
-
 function saveInvestment(){
 	
 	var investMentName = $("input[name='investmentName']").val().trim();
@@ -49,13 +43,12 @@ function saveInvestment(){
 		});
 
 		request.done(function(response) {
-			
-			alert("Save Successfully!!!")
-			document.getElementById("file").reset();
+			$(".investmentDetailRow input").val("");
+			$(".investmentDetailRow #investerDetails td").html("");
+			alert("Save Successfully!!!");
 		});
 	}else{
 		alert("Investment Name cannot be empty");
 	}
-	
-	
+
 }
