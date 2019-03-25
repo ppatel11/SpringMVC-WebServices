@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -19,6 +21,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserController {
+	
+	private static SimpleDateFormat dateFormatter = new SimpleDateFormat("MM/dd/yyyy");
+
 
 	@RequestMapping("/")
 	public ModelAndView display() {
@@ -82,7 +87,10 @@ public class UserController {
 	            Sheet datatypeSheet = workbook.getSheetAt(0);
 	            
 	            model.addObject("investmentName", datatypeSheet.getRow(3).getCell(CellReference.convertColStringToIndex("D")).getStringCellValue());
-	            model.addObject("legalCloseDate", datatypeSheet.getRow(4).getCell(CellReference.convertColStringToIndex("D")).getDateCellValue());
+	            
+	            Date legalCloseDate = datatypeSheet.getRow(4).getCell(CellReference.convertColStringToIndex("D")).getDateCellValue();
+	            
+	            model.addObject("legalCloseDate", dateFormatter.format(legalCloseDate));
 	            model.addObject("taxId", datatypeSheet.getRow(5).getCell(CellReference.convertColStringToIndex("D")).getStringCellValue());
 	            model.addObject("relationshipClient", datatypeSheet.getRow(6).getCell(CellReference.convertColStringToIndex("D")).getStringCellValue());
 	            model.addObject("commitmentAmount", datatypeSheet.getRow(7).getCell(CellReference.convertColStringToIndex("D")).getNumericCellValue());

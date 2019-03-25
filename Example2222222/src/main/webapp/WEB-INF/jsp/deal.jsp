@@ -29,7 +29,7 @@
 			<div class="header2">
 				<h1 class="c2">Create Investment</h1>
 				<div class="floatRight">
-					<form action="uploadFile" method="post" enctype="multipart/form-data">
+					<form id="file" action="uploadFile" method="post" enctype="multipart/form-data">
 						<input type="file" name="excel"> <input type="submit">
 					</form>
 				</div>
@@ -40,7 +40,7 @@
 				
 					<div>
 						<label>Investment Name</label> <input type="text"
-							name="investerName" value="${investmentName}"/>
+							name="investmentName" value="${investmentName}"/>
 					</div>
 					<div>
 						<label>Legal Close Date </label> <input type="text"
@@ -74,21 +74,21 @@
 									<th>Bla 1</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id="investerDetails">
 								<tr>
-									<td>${investerOneName}</td>
-									<td>${investerOneOwnerShip}</td>
-									<td>${investerOneBla1}</td>	
+									<td class="investerName">${investerOneName}</td>
+									<td class="investerOwnerShip">${investerOneOwnerShip}</td>
+									<td class="investerBla1">${investerOneBla1}</td>	
 								</tr>
 								<tr>
-									<td>${investerTwoName}</td>
-									<td>${investerTwoOwnerShip}</td>
-									<td>${investerTwoBla1}</td>	
+									<td class="investerName">${investerTwoName}</td>
+									<td class="investerOwnerShip">${investerTwoOwnerShip}</td>
+									<td class="investerBla1">${investerTwoBla1}</td>	
 								</tr>
 								<tr>
-									<td>${investerThreeName}</td>
-									<td>${investerThreeOwnerShip}</td>
-									<td>${investerThreeBla1}</td>	
+									<td class="investerName">${investerThreeName}</td>
+									<td class="investerOwnerShip">${investerThreeOwnerShip}</td>
+									<td class="investerBla1">${investerThreeBla1}</td>	
 								</tr>
 							</tbody>
 						</table>
